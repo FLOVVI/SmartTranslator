@@ -12,7 +12,7 @@ from smart_translator import SmartTranslate
 
 translator = SmartTranslate()
 
-print(translator.translate('Привет мир', 'ru'))
+print(translator.translate('Hallo Welt', 'de'))
 >>> Hello World
 ```
 ###
@@ -22,7 +22,7 @@ from smart_translator import SmartTranslate
 
 translator = SmartTranslate()
 
-print(translator.auto_spelling('Hillo Wrld', 'ru').spelling_text)
+print(translator.auto_spelling('Hillo Wrld', 'de').spelling_text)
 >>> Hello World
 ```
 ###
@@ -32,8 +32,8 @@ from smart_translator import SmartTranslate
 
 translator = SmartTranslate()
 
-print(translator.auto_spelling('Hillo Wrld', 'ru').result)
->>> Привет, мир
+print(translator.auto_spelling('Hillo Wrld', 'de').result)
+>>> Hallo Welt
 ```
 ###
 **All available languages**
@@ -49,16 +49,16 @@ from smart_translator import SmartTranslate
 
 translator = SmartTranslate(smart_translation=False)
 
-print((translator.translate('Привет мир', 'ru')))
->>> Привет мир
+print((translator.translate('Hello World', 'en')))
+>>> Hello World
 ```
 ###
 **Default language selection**
 ```
 from smart_translator import SmartTranslate
 
-translator = SmartTranslate(default_language='ru')
+translator = SmartTranslate(default_language='de')
 
 print((translator.translate('Hello World', 'en')))
->>> Привет, мир
+>>> Hallo Welt
 ```
